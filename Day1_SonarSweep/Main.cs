@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Reflection;
 
 namespace Day1_SonarSweep
 {
@@ -15,17 +14,17 @@ namespace Day1_SonarSweep
             Console.WriteLine($"Test result is {testResult}, must be 7");
 
             var measurementsFilePath = @"Resources\DepthMeasurements.txt";
-            var realMeasurements = GetDepthMeasurementsFromResources(measurementsFilePath);
+            var realMeasurements = GetDepthMeasurementsFromResourceFile(measurementsFilePath);
             var realResult = SonarSweep.CountIncreasedDepths(realMeasurements);
 
             Console.WriteLine($"Resl result is {realResult}");
         }
 
-        static IEnumerable<int> GetDepthMeasurementsFromResources(string resourceFile)
+        static IEnumerable<int> GetDepthMeasurementsFromResourceFile(string resourceFilePath)
         {
             var measurementsList = new List<int>();
 
-            TextReader textReader = new StreamReader(resourceFile);
+            TextReader textReader = new StreamReader(resourceFilePath);
             {
                 string result = textReader.ReadToEnd();
                 var splittedResult = result.Split('\n');
