@@ -18,6 +18,14 @@ namespace Day02_Dive
             var endpointResult = NavigationController.GetNavigationEndpoint(splittedCommands);
 
             Console.WriteLine($"Real result is {endpointResult.Item1 * endpointResult.Item2}");
+
+            var testEndpointAdvancedResult = NavigationController.GetNavigationEndpointAdvanced(testMovementsList);
+
+            Console.WriteLine($"Advanced test result is {testEndpointAdvancedResult.Item1 * testEndpointAdvancedResult.Item2}, must be 900");
+
+            var endpointAdvancedResult = NavigationController.GetNavigationEndpointAdvanced(splittedCommands);
+
+            Console.WriteLine($"Real result is {endpointAdvancedResult.Item1 * endpointAdvancedResult.Item2}");
         }
     }
 }
