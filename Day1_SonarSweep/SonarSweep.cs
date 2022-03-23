@@ -1,13 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Day1_SonarSweep
 {
-    class SonarSweep
+    public static class SonarSweep
     {
+        public static int CountIncreasedDepths(IEnumerable<int> measurements)
+        {
+            if (measurements == null || !measurements.Any())
+                return 0;
 
+            var previousDepth = measurements.First();
+            var numberOfIncreases = 0;
+
+            for (var i = 1; i < measurements.Count(); i++)
+            {
+                var currentDepth = measurements.ElementAt(i);
+
+                if (currentDepth > previousDepth)
+                    numberOfIncreases++;
+
+                previousDepth = currentDepth;
+            }
+
+            return numberOfIncreases;
+        }
     }
 }
