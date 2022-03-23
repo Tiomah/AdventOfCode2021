@@ -18,6 +18,14 @@ namespace Day1_SonarSweep
             var realResult = SonarSweep.CountIncreasedDepths(realMeasurements);
 
             Console.WriteLine($"Resl result is {realResult}");
+
+            var testSumsResult = SonarSweep.CountIncreasedDepthsSums(testMeasurements);
+
+            Console.WriteLine($"Test result is {testSumsResult}, must be 5");
+
+            var realSumsResult = SonarSweep.CountIncreasedDepthsSums(realMeasurements);
+
+            Console.WriteLine($"Resl result is {realSumsResult}");
         }
 
         static IEnumerable<int> GetDepthMeasurementsFromResourceFile(string resourceFilePath)
