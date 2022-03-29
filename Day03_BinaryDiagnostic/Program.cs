@@ -19,6 +19,14 @@ namespace Day03_BinaryDiagnostic
             var powerConsumptionResult = DiagnosticTool.GetPowerConsumption(diagnosticData);
 
             Console.WriteLine($"Result is {powerConsumptionResult}");
+
+            var lifeSupportRatingTest = DiagnosticTool.GetLifeSupportRating(testDiagnosticData);
+
+            Console.WriteLine($"Test result is {lifeSupportRatingTest}, must be 230");
+
+            var lifeSupportRating = DiagnosticTool.GetLifeSupportRating(diagnosticData);
+
+            Console.WriteLine($"Result is {lifeSupportRating}");
         }
 
         static IEnumerable<string> GetDiganosticDataFromResource()
