@@ -1,4 +1,5 @@
 ﻿using Day01_SonarSweep.Properties;
+using SubmarineTools;
 using System;
 using System.Collections.Generic;
 
@@ -6,33 +7,21 @@ namespace Day01_SonarSweep
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            List<int> testMeasurements = new List<int> { 199, 200, 208, 210, 200, 207, 240, 269, 260, 263 };
-            var testResult = SonarSweep.CountIncreasedDepths(testMeasurements);
-
-            Console.WriteLine($"Test result is {testResult}, must be 7");
-
             var realMeasurements = GetDepthMeasurementsFromResourceFile();
+
             var realResult = SonarSweep.CountIncreasedDepths(realMeasurements);
-
-            Console.WriteLine($"Resl result is {realResult}");
-
-            var testSumsResult = SonarSweep.CountIncreasedDepthsSums(testMeasurements);
-
-            Console.WriteLine($"Test result is {testSumsResult}, must be 5");
+            Console.WriteLine($"Real result is {realResult}");       
 
             var realSumsResult = SonarSweep.CountIncreasedDepthsSums(realMeasurements);
-
-            Console.WriteLine($"Resl result is {realSumsResult}");
+            Console.WriteLine($"Real sums result is {realSumsResult}");
         }
 
         static IEnumerable<int> GetDepthMeasurementsFromResourceFile()
         {
             var measurementsList = new List<int>();
-            var depthMeasurements = Resources.DepthMeasurements;
-
-            var splittedResult = depthMeasurements.Split('\n');
+            var splittedResult = SubmarineReader.ReadTextToStringRows(Resources.DepthMeasurements);
 
             foreach (var measurement in splittedResult)
             {
