@@ -97,8 +97,6 @@ namespace Day03_BinaryDiagnostic
                 diagnosticColumn += diagnosticRow[position];
             }
 
-            // This part I should do correctly
-
             var frequentBitValue = 0;
 
             if (isMostFrequentBit)
@@ -119,8 +117,6 @@ namespace Day03_BinaryDiagnostic
                 else if (groupsOfBitValues.First().Key == '1')
                     frequentBitValue = 1;
             }
-
-            // ===============================
 
             var charBitValue = char.Parse(frequentBitValue.ToString());
             var resultData = diagnosticData.Where(row => row[position] == charBitValue).ToList();
