@@ -9,9 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Day02_Dive", "Day02_Dive\Da
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Day03_BinaryDiagnostic", "Day03_BinaryDiagnostic\Day03_BinaryDiagnostic.csproj", "{C9FFEC8B-121C-4D93-A8DD-417686C19A90}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SubmarineTools", "SubmarineTools\SubmarineTools.csproj", "{BD2FA95A-C2C9-4512-A90A-348DA9447645}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SubmarineTools", "SubmarineTools\SubmarineTools.csproj", "{BD2FA95A-C2C9-4512-A90A-348DA9447645}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SubmarineTests", "SubmarineTests\SubmarineTests.csproj", "{7E5D3C08-FE54-4A90-B302-CCD26DABFFB6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SubmarineTests", "SubmarineTests\SubmarineTests.csproj", "{7E5D3C08-FE54-4A90-B302-CCD26DABFFB6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day04_GiantSquid", "Day04_GiantSquid\Day04_GiantSquid.csproj", "{F1869C4E-C8F4-4BF8-BC45-EBFDF6B57568}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{7E5D3C08-FE54-4A90-B302-CCD26DABFFB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E5D3C08-FE54-4A90-B302-CCD26DABFFB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7E5D3C08-FE54-4A90-B302-CCD26DABFFB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1869C4E-C8F4-4BF8-BC45-EBFDF6B57568}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1869C4E-C8F4-4BF8-BC45-EBFDF6B57568}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1869C4E-C8F4-4BF8-BC45-EBFDF6B57568}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1869C4E-C8F4-4BF8-BC45-EBFDF6B57568}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
