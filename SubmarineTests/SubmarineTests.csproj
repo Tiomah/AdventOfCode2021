@@ -17,6 +17,7 @@
     <ProjectReference Include="..\Day02_Dive\Day02_Dive.csproj" />
     <ProjectReference Include="..\Day03_BinaryDiagnostic\Day03_BinaryDiagnostic.csproj" />
     <ProjectReference Include="..\Day04_GiantSquid\Day04_GiantSquid.csproj" />
+    <ProjectReference Include="..\Day05_HydrothermalVenture\Day05_HydrothermalVenture.csproj" />
   </ItemGroup>
 
 </Project>

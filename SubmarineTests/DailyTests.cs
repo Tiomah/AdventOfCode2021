@@ -2,6 +2,7 @@ using Day01_SonarSweep;
 using Day02_Dive;
 using Day03_BinaryDiagnostic;
 using Day04_GiantSquid;
+using Day05_HydrothermalVenture;
 using NUnit.Framework;
 using System.Collections.Generic;
 
@@ -90,6 +91,20 @@ namespace SubmarineTests
 
             Assert.AreEqual(4512, testFirstBingoScore);
             Assert.AreEqual(1924, testLastBingoScore);
+        }
+
+        [Test]
+        public void Day05_Test()
+        {
+            var testCloudLines = new List<string> {
+                "0,9 -> 5,9", "8,0 -> 0,8", "9,4 -> 3,4", "2,2 -> 2,1", "7,0 -> 7,4",
+                "6,4 -> 2,0", "0,9 -> 2,9", "3,4 -> 1,4", "0,0 -> 8,8", "5,5 -> 8,2" };
+
+            var testBasicCloudsPointsCount = CloudsDetector.DetectCloudsIntersectBasic(testCloudLines, 2);
+            var testAdvancedCloudsPointsCount = CloudsDetector.DetectCloudsIntersectAdvanced(testCloudLines, 2);
+
+            Assert.AreEqual(5, testBasicCloudsPointsCount);
+            Assert.AreEqual(12, testAdvancedCloudsPointsCount);
         }
     }
 }
